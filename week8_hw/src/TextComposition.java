@@ -14,5 +14,8 @@ public class TextComposition implements LineBreakStrategy{
                 output = output + "[" + entry.getValue().getNatureSize() + "]" + entry.getValue().getContent() + " ";
             }
         }
+        if (!output.equals("")) {
+            System.out.println(output);
+        }
     }
 }
