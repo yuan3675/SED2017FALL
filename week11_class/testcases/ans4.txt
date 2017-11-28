@@ -1,0 +1,34 @@
+Temperature 5.0
+Humidity 0.9
+Pressure 1014.0
+Temperature 10.0
+Humidity 0.3
+Pressure 1015.0
+Temperature 30.0 10.0
+Humidity 0.9 0.3
+Pressure 1014.0 1015.0
+Temperature 80.0
+Humidity 0.3
+Pressure 1011.1
+Forecast cloudy.
+Temperature 20.0
+Humidity 0.4
+Pressure 1111.0
+Temperature 30.0 10.0 20.0
+Humidity 0.9 0.3 0.4
+Pressure 1014.0 1015.0 1111.0
+Temperature 12.0
+Humidity 0.0
+Pressure 1122.0
+Temperature 30.0 10.0 20.0 12.0
+Humidity 0.9 0.3 0.4 0.0
+Pressure 1014.0 1015.0 1111.0 1122.0
+Forecast sunny.
+Forecast cloudy.
+Temperature 22.0 5.0 80.0 5.0
+Humidity 0.5 0.9 0.3 0.6
+Pressure 1013.0 1014.0 1011.1 1014.3
+Temperature 20.0
+Humidity 0.3
+Pressure 1015.0
+Forecast cloudy.

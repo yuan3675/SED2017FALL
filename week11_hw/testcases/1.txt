@@ -1,0 +1,10 @@
+TextView1 I
+TextView2 want
+TextView3 to
+TextView4 drop
+TextView5 out
+TextView1 display
+TextView2 display
+TextView3 display
+TextView4 display
+TextView5 display

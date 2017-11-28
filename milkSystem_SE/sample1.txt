@@ -1,0 +1,12 @@
+setMilk MilkE
+setMilk MilkD
+addHousehold Alice 376_LincolnSt_Stoughton_MA_02072
+addHousehold Mark 322_Rocky_Holw_Raccoon_KY_41557
+setHousehold Selab 2241_Turnpike_Rd,_Raeford,_NC,_28376
+setHousehold Mark liuliuliu
+setOrder Mark MilkE 3 1
+setOrder Mark MilkB 2 1
+setOrder Mark MilkE 5 1
+Date 1 1
+Date 1 30
+Date 2 2

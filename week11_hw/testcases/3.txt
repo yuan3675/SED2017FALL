@@ -1,0 +1,11 @@
+TextView1 I
+TextView1 add thickBlackBorder
+TextView2 want
+TextView3 to
+TextView3 add thickBlackBorder
+TextView4 drop
+TextView5 out
+TextView5 add thickBlackBorder
+TextView1 display
+TextView2 display
+TextView5 display

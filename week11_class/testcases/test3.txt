@@ -1,0 +1,9 @@
+attach US Forecast
+data Asia 28.0 0.2 1014.6
+data US 22.0 0.9 1015.0
+data US 22.0 0.8 1015.0
+data US 22.0 0.5 1015.0
+data US 22.0 0.20 1015.0
+data US 22.0 0.1 1014.0
+attach Asia Forecast
+data Asia 30 0.1 1015

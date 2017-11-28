@@ -1,0 +1,3 @@
+I thickBlackBorder
+want
+out thickBlackBorder

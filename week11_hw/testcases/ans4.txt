@@ -1,0 +1,5 @@
+I thickBlackBorder scrollBar
+want
+to scrollBar thickBlackBorder
+drop scrollBar
+out thickBlackBorder scrollBar

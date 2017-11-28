@@ -1,0 +1,9 @@
+Temperature 17.0
+Humidity 0.5
+Pressure 1014.6
+Temperature 17.0 20.0
+Humidity 0.5 0.6
+Pressure 1014.6 1014.0
+Temperature 25.0 10.0 7.0
+Humidity 0.4 0.2 0.5
+Pressure 1015.1 1015.1 1013.0

@@ -1,0 +1,62 @@
+List:
+Alice 376_LincolnSt_Stoughton_MA_02072
+Mark 322_Rocky_Holw_Raccoon_KY_41557
+MilkA 3
+MilkB 2
+Summary:
+MilkA 3
+MilkB 2
+MilkC 0
+List:
+Alice 376_LincolnSt_Stoughton_MA_02072
+Mark 322_Rocky_Holw_Raccoon_KY_41557
+Summary:
+MilkA 0
+MilkB 0
+MilkC 0
+List:
+Alice 376_LincolnSt_Stoughton_MA_02072
+Mark 322_Rocky_Holw_Raccoon_KY_41557
+MilkA 3
+MilkB 2
+Summary:
+MilkA 3
+MilkB 2
+MilkC 0
+Bill:
+Alice 376_LincolnSt_Stoughton_MA_02072
+MilkA 0
+MilkB 0
+MilkC 0
+Mark 322_Rocky_Holw_Raccoon_KY_41557
+MilkA 81
+MilkB 54
+MilkC 0
+List:
+Alice 376_LincolnSt_Stoughton_MA_02072
+Mark 322_Rocky_Holw_Raccoon_KY_41557
+MilkA 2
+MilkC 3
+Summary:
+MilkA 2
+MilkB 0
+MilkC 3
+List:
+Alice 376_LincolnSt_Stoughton_MA_02072
+MilkB 2
+Mark 322_Rocky_Holw_Raccoon_KY_41557
+MilkA 2
+MilkC 3
+Summary:
+MilkA 2
+MilkB 2
+MilkC 3
+Bill:
+Alice 376_LincolnSt_Stoughton_MA_02072
+MilkA 0
+MilkB 58
+MilkC 0
+Mark 322_Rocky_Holw_Raccoon_KY_41557
+MilkA 60
+MilkB 0
+MilkC 90

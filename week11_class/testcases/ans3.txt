@@ -1,0 +1,6 @@
+Forecast rain.
+Forecast cloudy.
+Forecast cloudy.
+Forecast cloudy.
+Forecast sunny.
+Forecast sunny.

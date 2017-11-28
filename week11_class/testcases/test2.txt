@@ -1,0 +1,10 @@
+data US 25 0.4 1015.1
+attach Asia Statistics
+data Asia 17 0.5 1014.6
+data Asia 20 0.6 1014
+data US 10 0.2 1015.1
+detach Asia Statistics
+data Asia 25 0.7 1013.2
+attach US Statistics
+data US 7 0.5 1013
+detach Asia Statistics
