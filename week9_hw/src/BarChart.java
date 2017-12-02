@@ -1,33 +1,36 @@
 import java.util.ArrayList;
 
-public class PieChart implements Chart {
-    private  SpreadsheetApplication spreadsheetApplication;
+public class BarChart implements Chart {
+    private SpreadsheetApplication spreadsheetApplication;
 
-    public PieChart(SpreadsheetApplication spreadsheetApplication) {
+    public BarChart(SpreadsheetApplication spreadsheetApplication) {
         this.spreadsheetApplication = spreadsheetApplication;
     }
 
     @Override
     public String getType() {
-        return("PieChart");
+        return("BarChart");
     }
 
     @Override
-    public void display() {
+    public void update(String name, int value) {
+        boolean find = false;
         ArrayList<ApplicationData> applicationDataArrayList = this.spreadsheetApplication.getApplicationDataArrayList();
-        double sum = 0.0;
         for (ApplicationData applicationData : applicationDataArrayList) {
-            sum = sum + applicationData.getValue();
+            if (applicationData.getName().equals(name)) {
+                find = true;
+                applicationData.setValue(value);
+            }
         }
-        for (ApplicationData applicationData : applicationDataArrayList) {
-            double percentage = 100 * applicationData.getValue() / sum;
-            System.out.printf("%s %.1f%%\n", applicationData.getName(), percentage);
+        if (!find) {
+            ApplicationData applicationData = new ApplicationData(name, value);
+            this.spreadsheetApplication.setApplicationDataArrayList(applicationData);
         }
     }
 
     @Override
     public void change(String name, int value) {
-        System.out.println("PieChart change " + name + " " +value + ".");
+        System.out.println("BarChart change " + name + " " + value + ".");
         boolean find = false;
         ArrayList<ApplicationData> applicationDataArrayList = this.spreadsheetApplication.getApplicationDataArrayList();
         for (ApplicationData applicationData : applicationDataArrayList) {
@@ -44,18 +47,14 @@ public class PieChart implements Chart {
     }
 
     @Override
-    public void update(String name, int value) {
-        boolean find = false;
+    public void display() {
         ArrayList<ApplicationData> applicationDataArrayList = this.spreadsheetApplication.getApplicationDataArrayList();
         for (ApplicationData applicationData : applicationDataArrayList) {
-            if (applicationData.getName().equals(name)) {
-                find = true;
-                applicationData.setValue(value);
+            int value = applicationData.getValue();
+            for (int i=0; i < value; i++) {
+                System.out.printf("=");
             }
-        }
-        if (!find) {
-            ApplicationData applicationData = new ApplicationData(name, value);
-            this.spreadsheetApplication.setApplicationDataArrayList(applicationData);
+            System.out.printf(" %s\n", applicationData.getName());
         }
     }
 }

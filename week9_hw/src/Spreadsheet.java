@@ -1,33 +1,28 @@
 import java.util.ArrayList;
 
-public class PieChart implements Chart {
+public class Spreadsheet implements Chart {
     private  SpreadsheetApplication spreadsheetApplication;
 
-    public PieChart(SpreadsheetApplication spreadsheetApplication) {
+    public Spreadsheet(SpreadsheetApplication spreadsheetApplication) {
         this.spreadsheetApplication = spreadsheetApplication;
     }
 
     @Override
     public String getType() {
-        return("PieChart");
+        return("Spreadsheet");
     }
 
     @Override
     public void display() {
         ArrayList<ApplicationData> applicationDataArrayList = this.spreadsheetApplication.getApplicationDataArrayList();
-        double sum = 0.0;
         for (ApplicationData applicationData : applicationDataArrayList) {
-            sum = sum + applicationData.getValue();
-        }
-        for (ApplicationData applicationData : applicationDataArrayList) {
-            double percentage = 100 * applicationData.getValue() / sum;
-            System.out.printf("%s %.1f%%\n", applicationData.getName(), percentage);
+            System.out.println(applicationData.getName() + " " + applicationData.getValue());
         }
     }
 
     @Override
     public void change(String name, int value) {
-        System.out.println("PieChart change " + name + " " +value + ".");
+        System.out.println("Spreadsheet change " + name + " " + value + ".");
         boolean find = false;
         ArrayList<ApplicationData> applicationDataArrayList = this.spreadsheetApplication.getApplicationDataArrayList();
         for (ApplicationData applicationData : applicationDataArrayList) {
