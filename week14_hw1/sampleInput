@@ -1,0 +1,22 @@
+Backpacking
+Day Thursday
+SpecialEvent eventS
+Hotel hotelS
+Reservation reservationS
+Tickets TicketsS
+Normal
+Day Monday
+SpecialEvent eventA
+Hotel hotelA
+Reservation reservationA
+Tickets TicketsA
+Backpacking
+SpecialEvent eventB
+Hotel hotelB
+Tickets TicketsB
+Reservation reservationB
+Normal
+Day Sunday
+Hotel hotelC
+Tickets TicketsC
+SpecialEvent eventC
