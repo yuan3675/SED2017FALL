@@ -1,73 +1,51 @@
 import java.util.ArrayList;
 
 public class GUIApplication {
-    private ArrayList<Widget> widgets = new ArrayList<>();
+    private ArrayList<Window> windows = new ArrayList<>();
+    private ArrayList<Button> buttons = new ArrayList<>();
+    private ArrayList<ScrollBar> scrollBars = new ArrayList<>();
+    private WidgetFactory widgetFactory = new MotifWidgetFactory();
 
-    public void create(String type, String name) {
-        if (widgets.size() == 0) {
-            if (type.equals("Window")) {
-                widgets.add(new Window(name, new Motif()));
+    public void addWindow(String name) {
+        windows.add(widgetFactory.createWindow(name));
+    }
+    public void addScrollBar(String name) {
+        scrollBars.add(widgetFactory.createScrollBar(name));
+    }
+    public void addButton(String name) {
+        buttons.add(widgetFactory.createButton(name));
+    }
+    public void present() {
+        if (widgetFactory instanceof MotifWidgetFactory) {
+            for (Window window : windows) {
+                System.out.println("MotifWindow " + window.getName());
             }
-            else if (type.equals("ScrollBar")) {
-                widgets.add(new ScrollBar(name, new Motif()));
+            for (ScrollBar scrollBar : scrollBars) {
+                System.out.println("MotifScrollBar " + scrollBar.getName());
             }
-            else if (type.equals("Button")) {
-                widgets.add(new Button(name, new Motif()));
+            for (Button button : buttons) {
+                System.out.println("MotifButton " + button.getName());
             }
         }
         else {
-            LAFStandard standard = widgets.get(0).getStandard();
-            if (standard instanceof Motif) {
-                if (type.equals("Window")) {
-                    widgets.add(new Window(name, new Motif()));
-                } else if (type.equals("ScrollBar")) {
-                    widgets.add(new ScrollBar(name, new Motif()));
-                } else if (type.equals("Button")) {
-                    widgets.add(new Button(name, new Motif()));
-                }
+            for (Window window : windows) {
+                System.out.println("PMWindow " + window.getName());
             }
-            else if (standard instanceof PresentationManager) {
-                if (type.equals("Window")) {
-                    widgets.add(new Window(name, new PresentationManager()));
-                } else if (type.equals("ScrollBar")) {
-                    widgets.add(new ScrollBar(name, new PresentationManager()));
-                } else if (type.equals("Button")) {
-                    widgets.add(new Button(name, new PresentationManager()));
-                }
+            for (ScrollBar scrollBar : scrollBars) {
+                System.out.println("PMScrollBar " + scrollBar.getName());
             }
-            else {
-                System.out.println("instanceof not work");
-            }
-        }
-    }
-    public void switchStandard(String standard) {
-        if (standard.equals("Motif")) {
-            for (Widget widget : widgets) {
-                widget.setStandard(new Motif());
-            }
-        }
-        else if (standard.equals("PM")) {
-            for (Widget widget : widgets) {
-                widget.setStandard(new PresentationManager());
+            for (Button button : buttons) {
+                System.out.println("PMButton " + button.getName());
             }
         }
     }
 
-    public void present() {
-        for (Widget widget : widgets) {
-            if (widget instanceof Window) {
-                widget.implement();
-            }
+    public void switchStyle(String style) {
+        if (style.equals("Motif")) {
+            widgetFactory = new MotifWidgetFactory();
         }
-        for (Widget widget : widgets) {
-            if (widget instanceof ScrollBar) {
-                widget.implement();
-            }
-        }
-        for (Widget widget : widgets) {
-            if (widget instanceof Button) {
-                widget.implement();
-            }
+        else {
+            widgetFactory = new PMWidgetFactory();
         }
     }
 }
