@@ -1,0 +1,5 @@
+node VariableRefNode int code1 this_is_a_code
+node AssignmentNode assign code2 this_is_seafood
+checkType 1
+generateCode 1
+printContent 2

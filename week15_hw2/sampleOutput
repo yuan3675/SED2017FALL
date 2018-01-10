@@ -1,0 +1,5 @@
+Node 1: VariableRefNode int
+Node 2: AssignmentNode assign
+Node 1: VariableRefNode code1
+Node 2: AssignmentNode code2
+Node 2: AssignmentNode this_is_seafood
